@@ -18,56 +18,133 @@
                 <h2>Área do círculo</h2>
             </div>
             <div class=" calc">
-                <input type="text" id="ac" placeholder="Raio:">
+                <input type="text" id="raio" placeholder="Raio:">
                 <Button onclick="areacirc()"> Calcular</Button>
                 <p id="r1">0</p>
+            </div>
+            <div>
+                <P id="calc1"></P>
+
             </div>
         </div>
         <div class="style2">
             <div>
-                <h2>Área do retangulo</h2>
+                <h2>Área do retângulo</h2>
             </div>
             <div class="calc">
-                <input type="text" id="ab" placeholder="base">
-                <input type="text" id="ah" placeholder="altura">
+                <input type="text" id="br" placeholder="base">
+                <input type="text" id="hr" placeholder="altura">
                 <Button onclick="arearet()">Calcular</Button>
                 <p id="r2">0</p>
             </div>
+            <div>
+                <P id="calc2"></P>
+
+            </div>
 
         </div>
+       
+
         <div class="style1">
             <div>
-                <h2>Área do círculo</h2>
+                <h2>Área do triângulo</h2>
+            </div>
+            <div class="calc">
+                <input type="text" id="bt" placeholder="base">
+                <input type="text" id="ht" placeholder="altura">
+                <Button onclick="areatri()">Calcular</Button>
+                <p id="r3">0</p>
+            </div>
+            <div>
+                <P id="calc3"></P>
+
+            </div>
+            
+
+        </div>
+        <div class="style2">
+            <div>
+                <h2>hipotenusa</h2>
             </div>
             <div class=" calc">
                 <input type="text" id="co" placeholder="cateto oposto">
                 <input type="text" id="ca" placeholder="cateto adjacente">
                 <Button onclick="hipotenusa()">Calcular</Button>
-                <p id="r3">0</p>
+                <p id="r4">0</p>
+            </div>
+            <div>
+                <P id="calc4"></P>
+
+            </div>
+        </div>
+
+        <div class="style1">
+            <div>
+                <h2>Bhaskara</h2>
+            </div>
+            <div class=" calc">
+                <input type="text" id="a" placeholder="a">
+                <input type="text" id="b" placeholder="b">
+                <input type="text" id="c" placeholder="c">
+                <Button onclick="bhaskara()">Calcular</Button>
+                <div>
+                    <h3>Raiz 1:</h3>
+                    <p id="r5">0</p>
+                </div>
+                <div>
+                    <h3>Raiz 2:</h3><p id="r6">0</p></div>
             </div>
         </div>
         <div class="style2">
             <div>
-                <h2>Área do retangulo</h2>
+                <h2>Conversão de moedas (reais para dólares)</h2>
             </div>
             <div class="calc">
-                <input type="text" id="ab" placeholder="base">
-                <input type="text" id="ah" placeholder="altura">
-                <Button onclick="arearet()">Calcular</Button>
-                <p id="r2">0</p>
+                <input type="text" id="real" placeholder="real">
+                <input type="text" id="dolar" placeholder="cotação do dólar">
+                <Button onclick="conversaodemoedas()">Calcular</Button>
+                
+                <p id="r7">0</p>
             </div>
 
         </div>
+        <div class="style1">
+            <div>
+                <h2>Conversão de Temperatura (celsius para fahrenheit)</h2>
+            </div>
+            <div class=" calc">
+                <input type="text" id="celsius" placeholder="Celsius">
+                <Button onclick="graus()">Calcular</Button>
+               
+                    <p id="r8">0</p>
+               
+        </div>
+        <div class="style2">
+            <div>
+                <h2>Conversão de Velocidade (KM/H para M/S)</h2>
+            </div>
+            <div class="calc">
+                <input type="text" id="km" placeholder="km/h">
+                <Button onclick="conversaodevelocindade()">Calcular</Button>
+                
+                <p id="r9">0</p>
+            </div>
 
+        </div>
+        <div class="style1">
+            <div>
+                <h2>Média Aritimética entre 3 notas</h2>
+            </div>
+            <div class=" calc">
+                <input type="text" id="n1" placeholder="nota1">
+                <input type="text" id="n2" placeholder="nota2">
+                <input type="text" id="n3" placeholder="nota3">
+                <Button onclick="media()">Calcular</Button>
+               
+                    <p id="r10">0</p>
+               
+        </div>
 
-
-
-
-
-        <Button onclick="dolar()">Converte em dólar</Button>
-        <Button onclick="grauf()">C para F</Button>
-        <Button onclick="media()">média</Button>
-        <Button onclick="raizes()">Baskhara</Button>
 
         </div>
     </main>

@@ -1,59 +1,92 @@
 
 
 function areacirc() {
-    let raio = document.getElementById('ac').value;
+    let raio = document.getElementById('raio').value;
     let areacirc = 3.14 * raio * raio;
-    document.getElementById('r1').innerHTML = areacirc;
+    document.getElementById('r1').innerHTML = areacirc.toFixed(2);
+    document.getElementById('raio').value = null;
+    document.getElementById('calc1').innerHTML = raio +"² x pi =" + areacirc.toFixed(2);
 }
 
 
 function arearet() {
-    let base = document.getElementById('ab').value;
-    let altura = document.getElementById('ah').value;
-    document.getElementById('r2').innerHTML = base * altura;
+    let br = document.getElementById('br').value;
+    let hr = document.getElementById('hr').value;
+    document.getElementById('r2').innerHTML = br * hr;
+    document.getElementById('br').value = null;
+    document.getElementById('hr').value = null;
+    document.getElementById('calc2').innerHTML = br +"x" + hr +"="+ br * hr;
+}
+
+
+function areatri() {
+    let bt = document.getElementById('bt').value;
+    let ht = document.getElementById('ht').value;
+    document.getElementById('r3').innerHTML = (bt * ht)/2;
+    document.getElementById('bt').value = null;
+    document.getElementById('ht').value = null;
+    document.getElementById('calc3').innerHTML = bt +"x" + ht +"÷ 2 ="+ bt * ht/2;
 }
 
 function hipotenusa() {
     let co = document.getElementById('co').value;
     let ca = document.getElementById('ca').value;
     let hip = (co * co) + (ca * ca)
-    document.getElementById('r3').innerHTML = hip ** 0.5;
+    document.getElementById('r4').innerHTML = (hip ** 0.5).toFixed(2);
     document.getElementById('co').value = null;
     document.getElementById('ca').value = null;
+    document.getElementById('calc4').innerHTML = "hipotenusa = raiz ( "+ co +"² +"+ ca +"² ) = " +(hip**0.5).toFixed(2);
 
 }
 
-function dolar() {
-    let real = prompt("Quantos reais você quer converter?")
-    let dolar = prompt("Qual o valor do dólar?")
-    let valor = real / dolar
-    alert('$' + valor)
-}
-
-function grauf() {
-    let celsius = prompt("Qual a temperatura em celsius?")
-    let far = (celsius * (9 / 5)) + 32
-    alert(far + "F")
-}
-
-
-function media() {
-    let n1 = parseFloat(prompt("Nota 1:"))
-    let n2 = parseFloat(prompt("Nota 2:"))
-    let n3 = parseFloat(prompt("Nota 3:"))
-    let media = (n1 + n2 + n3) / 3
-    alert("A média é de: " + media)
-}
-
-function raizes() {
-    let a = prompt("Qual o valor de a?")
-    let b = prompt("Qual o valor de b?")
-    let c = prompt("Qual o valor de c?")
+function bhaskara() {
+    let a = document.getElementById('a').value;
+    let b = document.getElementById('b').value;
+    let c = document.getElementById('c').value;
     let delta = (b * b) - (4 * a * c)
     let rpositivo = (Math.sqrt(delta) - b) / (2 * a)
     let rnegativo = (-Math.sqrt(delta) - b) / (2 * a)
 
-    alert('Valor das raizes: ' + rpositivo + " e " + rnegativo)
+    document.getElementById('r5').innerHTML = rpositivo.toFixed(1);
+    document.getElementById('r6').innerHTML = rnegativo.toFixed(1);
+    document.getElementById('a').value = null;
+    document.getElementById('b').value = null;
+    document.getElementById('c').value = null;
+}
+
+function conversaodemoedas() {
+    let real = document.getElementById('real').value;
+    let dolar = document.getElementById('dolar').value;
+    let valor = real / dolar
+    document.getElementById('r7').innerHTML = "$" + valor.toFixed(2);
+    document.getElementById('real').value = null;
+    
+}
+
+function graus() {
+    let celsius = document.getElementById('celsius').value;
+    let far = (celsius * (9 / 5)) + 32
+    document.getElementById('r8').innerHTML = far + "F";
+    document.getElementById('celsius').value = null;
+}
+
+function conversaodevelocindade() {
+    let km = document.getElementById('km').value;
+    let m = km/3.6
+    document.getElementById('r9').innerHTML = m.toFixed(2) + "m/s";
+    document.getElementById('km').value = null;
+}
+
+
+function media() {
+    let n1 = parseFloat(document.getElementById('n1').value)
+    let n2 = parseFloat(document.getElementById('n2').value)
+    let n3 = parseFloat(document.getElementById('n3').value)
+    let media = (n1 + n2 + n3) / 3
+    document.getElementById('r10').innerHTML =media.toFixed(2);
+    document.getElementById('n1').value = null;
+    document.getElementById('n2').value = null;
+    document.getElementById('n3').value = null;
 }
 
 
