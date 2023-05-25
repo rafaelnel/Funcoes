@@ -1,4 +1,20 @@
 
+function divisao() {
+    let n1 = document.getElementById('numerador').value;
+    let n2 = document.getElementById('denominador').value;
+    if(n2 == 0){
+        document.getElementById('r11').innerHTML = null;
+        document.getElementById('errodivisao').innerHTML = "Não se pode dividir por zero.";
+        document.getElementById('errodivisao').classList.add("error");
+    }else {
+        document.getElementById('r11').innerHTML = (n1/n2).toFixed(2);
+        document.getElementById('denominador').value = null;
+        document.getElementById('numerador').value = null;
+        document.getElementById('errodivisao').innerHTML = null;
+        document.getElementById('errodivisao').classList.remove("error");
+    }
+   
+}
 
 function areacirc() {
     let raio = document.getElementById('raio').value;
@@ -47,11 +63,31 @@ function bhaskara() {
     let rpositivo = (Math.sqrt(delta) - b) / (2 * a)
     let rnegativo = (-Math.sqrt(delta) - b) / (2 * a)
 
-    document.getElementById('r5').innerHTML = rpositivo.toFixed(1);
-    document.getElementById('r6').innerHTML = rnegativo.toFixed(1);
-    document.getElementById('a').value = null;
-    document.getElementById('b').value = null;
-    document.getElementById('c').value = null;
+    if (delta<0){
+        document.getElementById('erro1').innerHTML ="*O delta resultou em um valor menor que zero, a equação não terá raízes reais.";
+        document.getElementById('erro1').classList.add("error");
+        document.getElementById('r5').innerHTML = null;
+        document.getElementById('r6').innerHTML = null;
+
+    }else if(delta == 0) {
+        document.getElementById('r5').innerHTML ="Raiz: "+ rpositivo.toFixed(1);
+        document.getElementById('r6').innerHTML = null;
+        document.getElementById('a').value = null;
+        document.getElementById('b').value = null;
+        document.getElementById('c').value = null;
+        document.getElementById('erro1').innerHTML = null;
+        document.getElementById('erro1').classList.remove("error");
+
+    }else {
+        document.getElementById('r5').innerHTML ="Raiz 1: "+ rpositivo.toFixed(1);
+        document.getElementById('r6').innerHTML ="Raiz 2: "+ rnegativo.toFixed(1);
+        document.getElementById('a').value = null;
+        document.getElementById('b').value = null;
+        document.getElementById('c').value = null;
+        document.getElementById('erro1').innerHTML = null;
+        document.getElementById('erro1').classList.remove("error");
+
+    }
 }
 
 function conversaodemoedas() {
@@ -70,7 +106,7 @@ function graus() {
     document.getElementById('celsius').value = null;
 }
 
-function conversaodevelocindade() {
+function conversaodevelocidade() {
     let km = document.getElementById('km').value;
     let m = km/3.6
     document.getElementById('r9').innerHTML = m.toFixed(2) + "m/s";

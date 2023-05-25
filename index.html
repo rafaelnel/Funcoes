@@ -13,6 +13,22 @@
 <body>
     <main>
         <h1>Calcula aê</h1>
+        <div class="style2">
+            <div>
+                <h2>Divisão</h2>
+            </div>
+            <div class=" calc">
+                <input type="text" id="numerador" placeholder="numerador">
+                <input type="text" id="denominador" placeholder="denominador">
+                <Button onclick="divisao()"> Calcular</Button>
+                <p id="r11">0</p>
+            </div>
+            <div class="" id="errodivisao">
+               
+
+            </div>
+
+        </div>
         <div class="style1">
             <div>
                 <h2>Área do círculo</h2>
@@ -88,11 +104,14 @@
                 <input type="text" id="c" placeholder="c">
                 <Button onclick="bhaskara()">Calcular</Button>
                 <div>
-                    <h3>Raiz 1:</h3>
-                    <p id="r5">0</p>
+                    <p id="r5"></p>
                 </div>
                 <div>
-                    <h3>Raiz 2:</h3><p id="r6">0</p></div>
+                    <p id="r6"></p></div>
+            </div>
+            <div class="" id="erro1">
+               
+
             </div>
         </div>
         <div class="style2">
@@ -125,7 +144,7 @@
             </div>
             <div class="calc">
                 <input type="text" id="km" placeholder="km/h">
-                <Button onclick="conversaodevelocindade()">Calcular</Button>
+                <Button onclick="conversaodevelocidade()">Calcular</Button>
                 
                 <p id="r9">0</p>
             </div>
